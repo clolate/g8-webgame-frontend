@@ -1,0 +1,326 @@
+body {
+  background: url("fondo4.jpg") no-repeat center fixed;
+  background-size: cover;
+  font-family: "IM Fell English SC", serif;
+}
+p {
+  text-align: justify;
+}
+#header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  max-width: 1264px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+}
+.scroll {
+  max-width: 75%;
+  max-height: 60%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 0;
+  /*  background: transparent url("../images/pngfuel.png") no-repeat center;*/
+  background: transparent url("https://cdn.hipwallpaper.com/i/2/15/czjgpO.jpg")
+    repeat center;
+}
+
+.rules {
+  float: left;
+  width: 47%;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: transparent url("../images/scroll.gif");
+  border: 7px solid;
+  padding: 15px;
+  border-image: url("../images/marco.jpg") 30 30 round;
+  position: absolute;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+.rules-title {
+  background: none;
+  background-size: auto;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #ffd700;
+  /* color: #00ff37; */
+  background-image: url("../images/newsheadline_background.gif");
+}
+.patches {
+  float: left;
+  width: 47%;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: transparent url("../images/scroll.gif");
+  border: 7px solid;
+  padding: 15px;
+  border-image: url("../images/marco.jpg") 30 30 round;
+  position: absolute;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.play {
+  float: left;
+  /* width: 47%; */
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: transparent url("../images/scroll.gif");
+  border: 7px solid;
+  padding: 10px;
+  border-image: url("../images/marco.jpg") 30 30 round;
+  position: absolute;
+  margin: 10%;
+  /* margin-left: 5%;
+  margin-right: 5%; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* margin-top: 5%;
+  margin-bottom: 10%; */
+}
+.play-buttons {
+  /* display: inline-block; */
+  /* display: inline;
+  vertical-align: middle;
+  width: auto; */
+  display: inline-block;
+}
+.barraNavegacion {
+}
+
+.buttonlogo {
+  background: none;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(logo.png);
+  color: #ffd700;
+  padding: 58px 195px;
+  border: 0px;
+  font-family: Tahoma;
+}
+.buttonNav {
+  background: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(botonBlackRed.png);
+  color: #ffd700;
+  padding: 14px 30px;
+  border: 0px;
+  font-family: Tahoma;
+}
+
+.buttonNav:hover {
+  background: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(botonRed.png);
+  border: 0px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: bisque;
+  font-family: Tahoma;
+}
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: bisque;
+  font-family: Tahoma;
+}
+.input-long[type="text"] {
+  width: 100%;
+  height: 200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: bisque;
+  font-family: Tahoma;
+}
+input[type="text"]:focus {
+  background-color: lightgoldenrodyellow;
+}
+.input-long[type="text"]:focus {
+  background-color: lightgoldenrodyellow;
+}
+input[type="password"]:focus {
+  background-color: lightgoldenrodyellow;
+}
+.input-title {
+  font-size: 180%;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.button2 {
+  background: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(botonBlackblue.png);
+  color: #ffd700;
+  padding: 14px 10px;
+  border: 0px;
+  font-family: Tahoma;
+}
+
+.button2:hover {
+  background: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(botonblue.png);
+  border: 0px;
+}
+
+.button3 {
+  background: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(botonBlackAmarillo.png);
+  color: #ffd700;
+  padding: 14px 10px;
+  border: 0px;
+  width: 30%;
+  font-family: Tahoma;
+  /* display: inline-block; */
+  align-items: center;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button3:hover {
+  background: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(botonAmarillo.png);
+  border: 0px;
+}
+
+.button4 {
+  background: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(botonBlackblue.png);
+  color: #ffd700;
+  padding: 14px 10px;
+  border: 0px;
+  font-family: Tahoma;
+  margin: 0 auto;
+  display: block;
+}
+
+.button4:hover {
+  background: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(botonblue.png);
+  border: 0px;
+}
+
+.table {
+  display: table; /* Allow the centering to work */
+  margin: 0 auto;
+}
+
+ul#horizontal-list {
+  min-width: 696px;
+  list-style: none;
+  padding-top: 20px;
+}
+ul#horizontal-list li {
+  display: inline;
+}
+
+.column {
+  float: left;
+  width: 47%;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: transparent url("../images/scroll.gif");
+  border: 7px solid;
+  padding: 15px;
+  border-image: url("../images/marco.jpg") 30 30 round;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title1 {
+  background: none;
+  background-size: auto;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #ffd700;
+  background-image: url("../images/newsheadline_background.gif");
+}
+
+.borderimg1 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url("../images/title-background-green.gif") 30 round;
+}

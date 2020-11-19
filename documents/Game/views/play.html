@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>A Jugar!</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="..\css\styles.css" />
+    <link rel="stylesheet" href="..\css\play.css" />
+    <link rel="stylesheet" href="..\css\tiles.css" />
+    <link rel="stylesheet" href="..\css\dropdown.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap"
+      rel="stylesheet"
+    />
+    <script src="..\js\jquery-3.3.1.js"></script>
+    <script src="..\js\dropdown.js"></script>
+    <script src="../js/Actions.js"></script>
+    <script src="../js/Map.js"></script>
+  </head>
+
+  <body>
+    <!-- <div id="header2"></div> -->
+
+    <form action="../index.html"><button class="buttonlogo"></button></form>
+
+    <div class="barraNavegacion">
+      <a href="../index.html"><button class="buttonNav">Inicio</button></a>
+      <a href="news.html"><button class="buttonNav">Noticias</button></a>
+      <a href="patches.html"><button class="buttonNav">Parches</button></a>
+      <a href="play.html"><button class="buttonNav">Juega</button></a>
+      <a href="rules.html"><button class="buttonNav">Reglas</button></a>
+      <a href="contact.html"><button class="buttonNav">Contacto</button></a>
+      <a href="about.html"><button class="buttonNav">About us</button></a>
+      <a href="login.html">
+        <button class="button2" class="right">Iniciar Sesión</button></a
+      >
+    </div>
+
+    <div class="play">
+      <div class="">
+        <img src="../images/titles/play.png" alt="play" class="title" />
+
+        <h1 class="title1">Acciones disponibles</h1>
+        <div class="actions">
+          <button class="button3" id="atacar" onclick="actionOnClick(this.id);">
+            Atacar
+          </button>
+          <button
+            class="button3"
+            id="defender"
+            onclick="actionOnClick(this.id);"
+          >
+            Defender
+          </button>
+          <button class="button3" id="sanar" onclick="actionOnClick(this.id);">
+            Sanar
+          </button>
+        </div>
+        <button class="button4" onclick="saveActions();">Guardar</button>
+        <button class="button4" onclick="undoAction();">Undo</button>
+        <input id="jsoninput" type="file" accept=".json" />
+      </div>
+      <h1 class="title1">Tablero</h1>
+      <div class="container" id="map"></div>
+    </div>
+
+    <div class="play" id="stats">
+      <h3 class="title1">Stats</h3>
+      <ul></ul>
+      <input
+        class="button2"
+        type="button"
+        value="Ver Stats"
+        onclick="Actions:ShowStats()"
+      />
+    </div>
+    <script>
+      map([]);
+      $(document).on("change", "#jsoninput", function (event) {
+        var reader = new FileReader();
+        reader.onload = function (event) {
+          var json = JSON.parse(event.target.result);
+          map(json["map"], json["position"]);
+          loadJSON(json);
+        };
+        reader.readAsText(event.target.files[0]);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Antes de comenzar...</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="..\css\styles.css" />
+    <script src="..\js\jquery-3.3.1.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--  <div id="header2"></div> -->
+
+    <form action="../index.html"><button class="buttonlogo"></button></form>
+
+    <div class="barraNavegacion">
+      <a href="../index.html"><button class="buttonNav">Inicio</button></a>
+      <a href="news.html"><button class="buttonNav">Noticias</button></a>
+      <a href="patches.html"><button class="buttonNav">Parches</button></a>
+      <a href="play.html"><button class="buttonNav">Juega</button></a>
+      <a href="rules.html"><button class="buttonNav">Reglas</button></a>
+      <a href="contact.html"><button class="buttonNav">Contacto</button></a>
+      <a href="about.html"><button class="buttonNav">About us</button></a>
+      <a href="login.html">
+        <button class="button2" class="right">Iniciar Sesión</button></a
+      >
+    </div>
+
+    <div class="rules">
+      <!-- <div class='reglas'> -->
+      <!-- <div class="column"> -->
+      <div>
+        <h1><img src="../images/titles/reglas.png" alt="reglas" /></h1>
+        <h3 class="rules-title">Objetivo del juego</h3>
+
+        El objetivo final del juego es encontrar el tesoro perdido de Barbanegra
+        y poder abrirlo. Para abrirlo un jugador necesita recolectar 3
+        fragmentos de llaves para crear la llave que abre el tesoro. <br />
+      </div>
+      <div>
+        <h3 class="rules-title">Historia</h3>
+        En las duras Tierras de Santiaguelot, escasea la comida y los recursos
+        para sobrevivir. La llegada del invierno amenaza la débil paz entre las
+        razas. En estos tiempos difíciles renace la leyenda del Tesoro perdido
+        del pirata Hernán Barbanegra. Cada raza ha designado a un héroe para
+        buscar el legendario tesoro, el héroe ha reclutado para su búsqueda a
+        valerosos compañeros que lo acompañarán en su aventura por las
+        inexploradas tierras de Santiaguelot. La búsqueda comienza …<br />
+      </div>
+
+      <div>
+        <h3 class="rules-title">Antes de comenzar…</h3>
+        Cada jugador debe elegir una raza para emprender la búsqueda, cada raza
+        cuenta con 6 personajes en su equipo: un héroe, un guerrero, un tanque,
+        un sanador, un mago y uno extra a elección del participante (debes
+        elegir un personaje extra de cualquier clase, excluyendo héroe). En cada
+        ronda tus personajes ejecutan sus acciones base (guerrero ataca, healer
+        helea ...) además cuentas con 3 acciones a elección (ver sección
+        Acciones).
+      </div>
+
+      <div>
+        <h3 class="rules-title">Preparación</h3>
+        Cada jugador debe elegir una raza y definir su personaje extra
+        (guerrero, tanque, sanador o mago).
+        <br />La base inicial de cada participante se asigna al azar en alguna
+        de las casillas designadas para base. <br />Cada jugador sólo observa
+        las casillas base de los jugadores y la casilla central, en la cual está
+        el tesoro <br />Cada jugador comienza con sus 6 personajes de cada
+        clase: Un héroe, un guerrero, un tanque, un curador, un mago y uno
+        adicional (este personaje debe ser elegido entre
+        guerrero/tanque/sanador/mago).
+      </div>
+
+      <div>
+        <h3 class="rules-title">Como Jugar</h3>
+        <p>¿Qué puedo hacer en cada ronda?</p>
+        <ul>
+          <li>
+            Ver el resultado del turno anterior. Tal vez encontraste algún
+            recurso o ganaste una batalla.
+          </li>
+          <li>
+            Si es que lo quieres, utiliza algún recurso que tienes guardado.
+          </li>
+          <li>Elegir las acciones del turno</li>
+          <li>
+            Para terminar tu turno, elige a dónde te quieres mover (una casilla
+            a los lados), si es que deseas hacerlo.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="rules-title">Tipo de Casillas</h3>
+        <p>Existen 11 tipos de casillas:</p>
+        <ol>
+          <li>
+            Base: cada jugador tiene una base, en esta casilla sólo puede
+            ingresar el equipo correspondiente. Estar en la base cura a tus
+            unidades 40 ptos al comienzo de la ronda siguiente.
+          </li>
+          <li>
+            Buff Ataque: Al estar en esta casilla, tú guerreros recibirán una
+            cantidad entre 1-3 de ataque al comienzo de la siguiente ronda.
+          </li>
+          <li>
+            Buff Defensa: Al estar en esta casilla, tú guerreros recibirán una
+            cantidad entre 1-3 de bloqueo al comienzo de la siguiente ronda.
+          </li>
+          <li>
+            Buff Vida: en esta casilla tu Héroe recibe una cantidad entre 1-3 de
+            vida adicional al comienzo de la siguiente ronda.
+          </li>
+          <li>
+            Buff Experiencia: Al estar estar en esta casilla uno de tus
+            personajes a elección recibe 1 de experiencia al comenzar la
+            siguiente ronda.
+          </li>
+          <li>
+            Curación: en esta casilla el Héroe recibe una curación de vida de
+            una cantidad entre 1-5 al comienzo de la siguiente ronda.
+          </li>
+          <li>Vacío: Esta casilla no tiene ningún efecto.</li>
+          <li>
+            Llave: En esta casilla se encuentra un fragmento de llave, es
+            necesario para poder abrir el tesoro. Al estar en esta casilla,
+            recibes un fragmento de llave al comenzar la siguiente ronda. Luego
+            de recolectar este fragmento de llave, esta casilla pasa a estar
+            vacía
+          </li>
+          <li>
+            Amenaza: En esta casilla tus guerreros se deben enfrentar con alguna
+            amenaza del mapa, si logras triunfar obtienes un objeto. Luego de
+            completar la amenaza la casilla pasa a estar vacía.
+          </li>
+          <li>
+            Objeto: El primer jugador en llegar satisfactoriamente a esta
+            casilla obtiene un objeto al comenzar la siguiente ronda. Luego pasa
+            a ser una casilla vacía.
+          </li>
+          <li>
+            Tesoro: El primer jugador en completar 3 rondas completas en esta
+            casilla con 3 fragmentos de llaves, gana el juego.
+          </li>
+        </ol>
+      </div>
+
+      <div>
+        <h3 class="rules-title">Acciones</h3>
+        <p>
+          En cada ronda del juego tu equipo cuenta con 3 acciones a elección,
+          estas acciones se ejecutan además de las básicas que ocurren y
+          dependen de la clase del personaje. Pueden repetirse
+          (guerrero+guerrero+tanque / sanador-sanador-sanador / etc)
+        </p>
+        <ul>
+          <li>
+            Guerrero: gastar una acción en el guerrero generará un ataque
+            adicional de este.
+          </li>
+          <li>
+            Sanador: gastar una acción en el sanador generará un heleo adicional
+            al Héroe.
+          </li>
+          <li>Tanque: gastar una acción en el tanque aumenta tu armadura</li>
+        </ul>
+        <p>El orden de las acciones se definen a continuación:</p>
+        <ol>
+          <li>se calcula el stun del mago</li>
+          <li>se helea el héroe</li>
+          <li>se calcula el daño del guerrero</li>
+          <li>se calcula el daño mitigado por el tanque</li>
+          <li>se calcula el HP del héroe</li>
+        </ol>
+      </div>
+
+      <div>
+        <h3 class="rules-title">Razas</h3>
+        <ul>
+          <li>Humano: Comienza con +10 de curación</li>
+          <li>Elfo: Comienza con +3 de experiencia</li>
+          <li>Enano: Comienza con +20 de vida</li>
+          <li>Ogro: Comienza con +20 de ataque</li>
+          <li>Gnomo: Comienza con +20 de bloqueo</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="rules-title">Clases</h3>
+        <p>
+          Cada clase tiene una acción única. Además, cada clase comienza en
+          nivel 1, al recibir 3 de experiencia avanzará a nivel 2 y al recibir 6
+          más de experiencia avanzará a nivel 3. A mayor nivel, más poderosos
+          será cada clase.
+        </p>
+        <ul>
+          <li>
+            Héroe (tiene HP): Con su acción indica en qué dirección hay una
+            llave. El héroe tiene 100/150/200 HP de vida. Si la vida del héroe
+            llega a 0 HP debe volver a su base.
+          </li>
+          <li>
+            Guerrero: Con su acción puede atacar 30/60/100 a los enemigos.
+          </li>
+          <li>
+            Sanador (da HP): Con su acción puede restablecer 10/20/35 vida del
+            héroe
+          </li>
+          <li>
+            Tanque (defensa): Con su acción puede bloquear 30/60/90% de daño que
+            hubiese recibido un héroe.
+          </li>
+          <li>
+            Mago (afecta a las otras clases): Con su acción puede con
+            25%/50%/75% de probabilidad inhabilitar por una ronda a un enemigo
+            con el cual se enfrente
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="rules-title">Objetos</h3>
+        <p>
+          Los recursos los obtienen a medida que descubres/ exploras nuevas
+          casillas
+        </p>
+
+        <ul>
+          <li>
+            Clarividencia: Hace que en el mapa aparezca la posición de una
+            llave.
+          </li>
+          <li>+ Experiencia: Entrega +2 de experiencia a un personaje.</li>
+          <li>Poción de vida: Entrega +50 de vida al héroe.</li>
+          <li>Espada: Entrega +10 de ataque a un Guerrero.</li>
+          <li>Escudo: Entrega +10 de Bloqueo a un Tanque.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="rules-title">Amenazas y Enemigos</h3>
+        <p>
+          En el mapa existen casillas con enemigos que presentan una amenaza
+          para tu equipo. Debes enfrentarte a ellas y triunfar para obtener una
+          recompensa o fracasar y volver derrotado a la base uwu. Si salen
+          triunfantes ganan experiencia (Exp) y puedes encontrar algún tesoro
+          (espada, poción, llaves, etc)
+        </p>
+        <ul>
+          <li>enemigo hp/dmg/def/stun aún sin definir</li>
+          <li>Dragon ??/??/??/??</li>
+          <li>Ladrones ??/??/??/??</li>
+          <li>Bruja ??/??/??/??</li>
+          <li>Troll ??/??/??/??</li>
+          <li>Lobos ??/??/??/??</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="rules-title">Enfrentamiento</h3>
+        <p>
+          Al encontrarse dos o más equipos en una casilla hay un enfrentamiento.
+          Este enfrentamiento es hasta la muerte, con el equipo perdedor
+          retornando a recuperarse a su base. El daño que inflige cada equipo es
+          dependiente de su ataque, mientras que su capacidad de defenderse
+          depende de su bloqueo. El equipo que queda con vida gana el
+          enfrentamiento y el control de la casilla, además de un bono de +5
+          experiencia.
+        </p>
+        <p>
+          El daño que el equipo A le hace al equipo B es calculado de la
+          siguiente manera: El daño base es de 20, y por cada 10 pts de stats
+          que el ataque de A tiene sobre bloqueo de B, recibe un daño adicional
+          de 10%, si no es mayor entonces recibe un castigo de 10% por cada 10
+          pts.
+        </p>
+        <p>
+          En caso de que un mago anule a un guerrero o defensor, entonces se
+          pierde sus atributos para esa ronda. Los equipos se toman turnos
+          realizando su set de acciones (ataque,defensa,sanación) hasta que solo
+          uno quede con hp.
+        </p>
+      </div>
+      <!-- </div> -->
+      <!-- </div> -->
+    </div>
+  </body>
+</html>

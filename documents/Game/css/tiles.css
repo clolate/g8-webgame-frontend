@@ -1,0 +1,68 @@
+.defensa,
+.ataque,
+.curacion {
+  background-image: url("../images/background/stone.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.vida {
+  background-image: url("../images/background/red.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.exp {
+  background-image: url("../images/background/grass.jpg");
+  background-repeat: no-repeat;
+}
+
+.objeto {
+  background-image: url("../images/background/chest.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.vacio {
+  background-image: url("../images/background/dirt.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.amenaza {
+  background-image: url("../images/background/lava.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.base {
+  background-image: url("../images/background/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.llave {
+  background-image: url("../images/background/circle.png"),
+    url("../images/background/gold.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.tesoro {
+  background-image: url("../images/background/sparkle-cover.png"),
+    url("../images/background/tcheast.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.blocked {
+  background-color: dimgrey;
+}
+.iscurrent {
+  border: 3px solid rgb(189, 9, 9);
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Templarios",
+  "race": "dwarf",
+  "position": [1, 1],
+  "objectsCollected": { "healthPotion": 1, "life": 2, "keys": 0 },
+  "currentStats": {
+    "defensa": 12,
+    "ataque": 10,
+    "curacion": 10,
+    "hp": 10,
+    "exp": 10,
+    "stun": 0
+  },
+  "map": [
+    { "position": [0, 1], "tipo": "amenaza" },
+    { "position": [0, 0], "tipo": "base" },
+    { "position": [1, 1], "tipo": "curacion"}
+  ]
+}
