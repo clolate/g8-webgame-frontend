@@ -14,7 +14,8 @@
     <script src="..\js\jquery-3.3.1.js"></script>
     <script src="..\js\dropdown.js"></script>
     <script src="../js/Actions.js"></script>
-    <script src="../js/Map.js"></script>
+    <script src="..\js\app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
@@ -33,6 +34,7 @@
       <a href="login.html">
         <button class="button2" class="right">Iniciar Sesión</button></a
       >
+      <button class="button2" onclick="app:Cerrar_sesion()">Cerrar Sesión</button>
     </div>
 
     <div class="play">
@@ -57,33 +59,209 @@
         </div>
         <button class="button4" onclick="saveActions();">Guardar</button>
         <button class="button4" onclick="undoAction();">Undo</button>
-        <input id="jsoninput" type="file" accept=".json" />
       </div>
       <h1 class="title1">Tablero</h1>
-      <div class="container" id="map"></div>
+      <div class="container">
+        <div class="map-container">
+          <div class="map-item base">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/5.png" />
+          </div>
+          <div class="map-item exp">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/1.png" />
+          </div>
+          <div class="map-item amenaza">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/2.png" />
+          </div>
+          <div class="map-item llave">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/6.png" />
+          </div>
+          <div class="map-item defensa">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/6.png" />
+          </div>
+          <div class="map-item ataque">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/3.png" />
+          </div>
+          <div class="map-item curacion">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/4.png" />
+          </div>
+        </div>
+        <div class="map-container">
+          <div class="map-item objeto">
+            <img
+              class="icono"
+              src="../images/pick-up-byMJ/4-others/4.png"
+              alt="objeto"
+            />
+          </div>
+          <div class="map-item vacio"></div>
+          <div class="map-item vida">
+            <img
+              class="icono"
+              src="../images/pick-up-byMJ/3-powers/10.png"
+              alt="corazon"
+            />
+          </div>
+          <div class="map-item llave">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/6.png" />
+          </div>
+          <div class="map-item ataque">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/3.png" />
+          </div>
+          <div class="map-item amenaza">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/2.png" />
+          </div>
+          <div class="map-item base">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/5.png" />
+          </div>
+        </div>
+        <div class="map-container">
+          <div class="map-item vida">
+            <img
+              class="icono"
+              src="../images/pick-up-byMJ/3-powers/10.png"
+              alt="corazon"
+            />
+          </div>
+          <div class="map-item vacio"></div>
+          <div class="map-item objeto">
+            <img
+              class="icono"
+              src="../images/pick-up-byMJ/4-others/4.png"
+              alt="objeto"
+            />
+          </div>
+          <div class="map-item llave">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/6.png" />
+          </div>
+          <div class="map-item exp">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/1.png" />
+          </div>
+          <div class="map-item vida">
+            <img
+              class="icono"
+              src="../images/pick-up-byMJ/3-powers/10.png"
+              alt="corazon"
+            />
+          </div>
+          <div class="map-item amenaza">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/2.png" />
+          </div>
+        </div>
+        <div class="map-container">
+          <div class="map-item ataque">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/3.png" />
+          </div>
+          <div class="map-item exp">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/1.png" />
+          </div>
+          <div class="map-item llave">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/6.png" />
+          </div>
+          <div class="map-item tesoro"></div>
+          <div class="map-item curacion">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/4.png" />
+          </div>
+          <div class="map-item exp">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/1.png" />
+          </div>
+          <div class="map-item llave">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/6.png" />
+          </div>
+        </div>
+        <div class="map-container">
+          <div class="map-item objeto">
+            <img
+              class="icono"
+              src="../images/pick-up-byMJ/4-others/4.png"
+              alt="objeto"
+            />
+          </div>
+          <div class="map-item defensa">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/6.png" />
+          </div>
+          <div class="map-item curacion">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/4.png" />
+          </div>
+          <div class="map-item vida">
+            <img
+              class="icono"
+              src="../images/pick-up-byMJ/3-powers/10.png"
+              alt="corazon"
+            />
+          </div>
+          <div class="map-item amenaza">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/2.png" />
+          </div>
+          <div class="map-item vacio"></div>
+          <div class="map-item objeto">
+            <img
+              class="icono"
+              src="../images/pick-up-byMJ/4-others/4.png"
+              alt="objeto"
+            />
+          </div>
+        </div>
+        <div class="map-container">
+          <div class="map-item amenaza">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/2.png" />
+          </div>
+          <div class="map-item llave">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/6.png" />
+          </div>
+          <div class="map-item exp">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/1.png" />
+          </div>
+          <div class="map-item objeto">
+            <img
+              class="icono"
+              src="../images/pick-up-byMJ/4-others/4.png"
+              alt="objeto"
+            />
+          </div>
+          <div class="map-item ataque">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/3.png" />
+          </div>
+          <div class="map-item base">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/5.png" />
+          </div>
+          <div class="map-item defensa">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/6.png" />
+          </div>
+        </div>
+        <div class="map-container">
+          <div class="map-item base">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/5.png" />
+          </div>
+          <div class="map-item vida">
+            <img
+              class="icono"
+              src="../images/pick-up-byMJ/3-powers/10.png"
+              alt="corazon"
+            />
+          </div>
+          <div class="map-item curacion">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/4.png" />
+          </div>
+          <div class="map-item defensa">
+            <img class="icono" src="../images/pick-up-byMJ/3-powers/6.png" />
+          </div>
+          <div class="map-item llave">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/6.png" />
+          </div>
+          <div class="map-item vacio"></div>
+          <div class="map-item llave">
+            <img class="icono" src="../images/pick-up-byMJ/4-others/6.png" />
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="play" id="stats">
-      <h3 class="title1">Stats</h3>
-      <ul></ul>
-      <input
-        class="button2"
-        type="button"
-        value="Ver Stats"
-        onclick="Actions:ShowStats()"
-      />
-    </div>
-    <script>
-      map([]);
-      $(document).on("change", "#jsoninput", function (event) {
-        var reader = new FileReader();
-        reader.onload = function (event) {
-          var json = JSON.parse(event.target.result);
-          map(json["map"], json["position"]);
-          loadJSON(json);
-        };
-        reader.readAsText(event.target.files[0]);
-      });
-    </script>
+
+    <div class="play" id ="stats">
+        <h3 class="title1">Stats</h3>
+        <ul></ul>
+         <input  class="button2" type="button" value="Ver Stats" onclick="Actions:ShowStats()">
+      </div>
+
   </body>
 </html>

@@ -1,22 +1,17 @@
-crear_localstorage_demo();
 
-function crear_localstorage_demo() {
-  let user1 = {
-    user: "Matias",
-    age: 26,
-    mail: "masoto2@uc.cl",
-    pass: "12345678",
-  };
-  let user2 = {
-    user: "Joaco",
-    age: 26,
-    mail: "jysoto@uc.cl",
-    pass: "12345678",
-  };
-  //nuevousuario()
-  localStorage.setItem("Matias", JSON.stringify(user1));
-  localStorage.setItem("Joaco", JSON.stringify(user2));
-}
+
+function Create_user(user, mail, age, password){
+  axios.post('https://mysterious-oasis-39340.herokuapp.com/Users/new',{
+    "name": user,
+  	"password": password,
+  	"age": age,
+  	"mail": mail
+  }).then(response => {
+    console.log(response);
+  })
+
+};
+
 
 function get_localstorage() {
   var users = [],
@@ -52,17 +47,53 @@ function GetUsername(mail) {
   }
 }
 
+function login_post(mail, password){
+  axios.post('https://mysterious-oasis-39340.herokuapp.com/auth/login',{
+    "mail": mail,
+  	"password": password
+  }).then(response => {
+    if (response['data']['msg'] == "Has iniciado sesion correctamente"){
+      alert(response['data']['msg']);
+      localStorage.setItem("token", response['data']['user']['token']);
+      return true;
+    }
+    else {
+      alert(response['data']['msg'])
+      return false;
+    }
+
+  })
+}
+
+function getToken() {
+  var local = [],
+    keys = Object.keys(localStorage),
+    i = keys.length;
+  if (localStorage.getItem("token")){
+    return localStorage.getItem("token");
+  }
+  else {
+    return false
+  }
+
+}
+
+function Cerrar_sesion(){
+  axios.delete('https://mysterious-oasis-39340.herokuapp.com/auth/logout', {
+    headers: {
+      Authorization:  "Bearer " + getToken()}
+}
+).then(response => {
+    alert(response);
+})
+};
+
 function Login() {
   var mail = document.getElementById("mail").value;
   var pass = document.getElementById("myPass").value;
 
-  if (checkLogIn(mail, pass)) {
-    alert("Session inciada exitosamente");
-    return true;
-  } else {
-    alert("Contraseña o usario incorrecto");
-    return false;
-  }
+  login_post(mail, pass)
+  return true
 }
 
 function MostrarPass() {
@@ -98,15 +129,10 @@ function CreateUser() {
     return false;
   }
   if (pass1 != pass2) {
-    alert("Error: Contraseñas no coinciden");
+    console.log("Error: Contraseñas no coinciden");
     return false;
   }
-  let nUser = {
-    user: user,
-    age: age,
-    mail: mail,
-    pass: pass1,
-  };
-  localStorage.setItem(user, JSON.stringify(nUser));
+  Create_user(user, mail, age, pass1)
   alert("Cuenta creada exitosamente");
+  console.log("Cuenta creada exitosamente");
 }

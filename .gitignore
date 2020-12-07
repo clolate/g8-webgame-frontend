@@ -103,8 +103,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-#vercel deploy?
-now.json
-
-.vercel
